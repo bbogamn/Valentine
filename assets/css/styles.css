@@ -1,0 +1,116 @@
+:root{
+  --bg:#0b0b0f;
+  --card:#13131a;
+  --text:#e9e9f2;
+  --muted:#b7b7c6;
+  --line:rgba(255,255,255,.10);
+  --shadow: 0 12px 40px rgba(0,0,0,.45);
+  --radius:18px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 700px at 20% 10%, rgba(255,255,255,.06), transparent 60%),
+              radial-gradient(900px 500px at 80% 30%, rgba(255,255,255,.05), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+
+.wrap{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 16px 28px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding: 14px 14px;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.03);
+  backdrop-filter: blur(8px);
+}
+
+.brand{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius: 14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  font-size: 20px;
+}
+
+.meta h1{
+  margin:0;
+  font-size: 18px;
+  letter-spacing: .2px;
+}
+.sub{
+  margin:4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.btn{
+  margin-left:auto;
+  text-decoration:none;
+  color: var(--text);
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  transition: transform .15s ease, background .15s ease;
+}
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.07);
+}
+
+.card{
+  margin-top: 14px;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+.figure{
+  margin:0;
+  position:relative;
+}
+
+.figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.foot{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.foot a{
+  color: var(--muted);
+  text-decoration:none;
+  border-bottom: 1px dashed rgba(255,255,255,.25);
+}
+.foot a:hover{ color: var(--text); }
+.dot{ opacity:.5; }
+
+@media (max-width:520px){
+  .top{ align-items:flex-start; }
+  .btn{ margin-left:0; }
+}
